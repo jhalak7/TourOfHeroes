@@ -20,7 +20,13 @@ describe('DashboardComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  it('getHeroes',()=>{
+    spyOn(component,'getHeroes');
+    //const res=component.getHeroes();
+    expect(component.getHeroes).toBeTruthy();
+    expect(component.getHeroes).toHaveBeenCalled();
+    //expect(res).toEqual()
+  });
   it('should create', () => {
     expect(component).toBeTruthy();
   });
